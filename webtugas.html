@@ -81,6 +81,17 @@
             margin-top: 40px;
             font-size: 0.9em;
         }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block; 
+        }
+        footer li {
+            margin: 5px 0;
+        }
+
 
         .schedule-list {
             position: relative;
@@ -120,7 +131,7 @@
         }
 
         .schedule-time {
-            flex: 0 0 150px; /* Fixed width for time column */
+            flex: 0 0 150px; 
             font-weight: bold;
             color: var(--primary-color);
             margin-right: 20px;
@@ -141,38 +152,26 @@
             margin-bottom: 10px;
         }
 
-        .image-placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: var(--light-bg);
-            border: 2px dashed var(--timeline-line);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--timeline-line);
-            font-style: italic;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-
-        .schedule-content img[src] {
-
+        .schedule-content img {
             display: block; 
             width: 100%;
-            height: 300px; 
+
+            height: auto; 
+            max-height: 250px;
             object-fit: cover; 
             border-radius: 5px; 
             margin-top: 10px;
         }
-        
-        .schedule-content img[src] + .image-placeholder {
-            display: none;
+
+        .schedule-content audio,
+        .schedule-content video {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
         }
 
-        .schedule-content img:not([src]) {
-             display: none;
-        }
 
     </style>
 </head>
@@ -195,47 +194,43 @@
             <div class="schedule-item">
                 <div class="schedule-time">05:00 AM</div>
                 <div class="schedule-content">
-                    <p>Salat subuh</p>
+                    <p><strong>Salat subuh</strong></p>
                     <img src="Shalat-Subuh.jpg" alt="Fajr Prayer Image">
-                    <p>Pada jam 5 pagi,saya bangun tidur atau bisa lebih cepat. Ketika bangun, saya Salat subuh dan melakukan kegiatan yg lainya </p>
+                    <p>Pada jam 5 pagi, saya bangun tidur atau bisa lebih cepat. Ketika bangun, saya Salat subuh dan melakukan kegiatan yang lainnya.</p>
                 </div>
             </div>
 
             <div class="schedule-item">
                 <div class="schedule-time">07:00 AM - 08:00 AM</div>
                 <div class="schedule-content">
-                    <p>Mengantar adik saya ke sekolah</p>
+                    <p><strong>Mengantar adik saya ke sekolah</strong></p>
                     <img src="sekolah.jpg" alt="School Drop-off Image">
-                    <p>Pada jam 7 itu saya mengantar adik saya pergi ke sekolah
-                         dan biasanya sekitar jam 10 saya menjemput adik saya dari sekolah </p>
-
-        
+                    <p>Pada jam 7 itu saya mengantar adik saya pergi ke sekolah, dan biasanya sekitar jam 10 saya menjemput adik saya dari sekolah.</p>
                 </div>
             </div>
 
             <div class="schedule-item">
                 <div class="schedule-time">09:00 AM</div>
                 <div class="schedule-content">
-                    <p>Menyapu Rumah</p>
+                    <p><strong>Menyapu Rumah</strong></p>
                     <img src="menyapu.jpg" alt="Sweeping Image">
-                    <p>Pada jam 9 saya menyapu rumah, mengepel dan biasanya 
-                        menyuci pakaian yang saya pakai ketika kuliah </p>
+                    <p>Pada jam 9 saya menyapu rumah, mengepel dan biasanya menyuci pakaian yang saya pakai ketika kuliah.</p>
                 </div>
             </div>
 
             <div class="schedule-item">
                 <div class="schedule-time">10:00 AM - 12:00 PM</div>
                 <div class="schedule-content">
-                    <p>Menonton youtube,film,anime mendengarkan musik dll.</p>
+                    <p><strong>Menonton youtube, film, anime, mendengarkan musik dll.</strong></p>
                     <img src="film.jpg" alt="Leisure Time Image">
-                    <p>Pada jam 10 sampai jam 12 saya melakukan kegiatan santai mungkin itu menonton film ,anime,youtube,mendengarkanmusik atau mengerjakan tugas kuliah ketika ada seperti halnya saya mengerjakan tugas web ini saya mengerjakan nya pada jam 10 sampai 12.</p>
+                    <p>Pada jam 10 sampai jam 12 saya melakukan kegiatan santai. Mungkin itu menonton film, anime, youtube, mendengarkan musik atau mengerjakan tugas kuliah (seperti halnya saya mengerjakan tugas web ini).</p>
                 </div>
             </div>
 
             <div class="schedule-item">
                 <div class="schedule-time">12:00 PM</div>
                 <div class="schedule-content">
-                    <p>Salat Dzuhur</p>
+                    <p><strong>Salat Dzuhur</strong></p>
                     <img src="dzuhur.jpeg" alt="Dhuhr Prayer Image">
                 </div>
             </div>
@@ -243,7 +238,7 @@
             <div class="schedule-item">
                 <div class="schedule-time">01:00 PM - 03:00 PM</div>
                 <div class="schedule-content">
-                    <p>Tidur Siang</p>
+                    <p><strong>Tidur Siang</strong></p>
                     <img src="siang.jpeg" alt="Nap Image">
                 </div>
             </div>
@@ -251,7 +246,7 @@
             <div class="schedule-item">
                 <div class="schedule-time">04:00 PM</div>
                 <div class="schedule-content">
-                    <p>Mengantar adik saya Mengaji</p>
+                    <p><strong>Mengantar adik saya Mengaji</strong></p>
                     <img src="mengaji.webp" alt="Qur'an Class Image">
                 </div>
             </div>
@@ -259,34 +254,36 @@
             <div class="schedule-item">
                 <div class="schedule-time">05:00 PM - 09:00 PM</div>
                 <div class="schedule-content">
-                    <p>Mengantar Makanan ke rumah-rumah</p>
+                    <p><strong>Mengantar Makanan ke rumah-rumah</strong></p>
                     <img src="mengantar.jpeg" alt="Work/Delivery Image">
-                    <p>pada Jam 5 sampai jam 9 saya membantu ibu saya mengantar makanan ke rumah rumah </p>
+                    <p>Pada Jam 5 sampai jam 9 saya membantu ibu saya mengantar makanan ke rumah-rumah.</p>
                 </div>
             </div>
 
             <div class="schedule-item">
-        <div class="schedule-time">10:00 PM - 05:00 AM</div>
-        <div class="schedule-content">
-            <p>Tidur Malam</p>
-        <img src="malam.jpg" alt="Sleeping Image">
-        <p>Pada jam 9 sampai 10 saya biasanya bersantai mungkin nonton tiktok, mendengarkan musik atau scroll reels instagram.</p>
-        
-        <p><audio src="ceremony.mp3" controls></audio></p>
-        
-        <p>lalu pada jam 10 sampai jam 5 saya tidur Malam. </p>
-    </div>
-</div>
+                <div class="schedule-time">10:00 PM - 05:00 AM</div>
+                <div class="schedule-content">
+                    <p><strong>Tidur Malam</strong></p>
+                    <img src="malam.jpg" alt="Sleeping Image">
+                    <p>Pada jam 9 sampai 10 saya biasanya bersantai (nonton tiktok, mendengarkan musik, atau *scroll reels* instagram).</p>
+                    
+                    <audio src="ceremony.mp3" controls></audio>
+                    
+                    <video src="f1.mp4" controls></video>
+                    
+                    <p>Lalu pada jam 10 sampai jam 5 saya tidur Malam.</p>
+                </div>
+            </div>
 
         </section>
     </main>
 
     <footer>
-        <p>
+        <ul>
             <li>Muhammad Rifky Ardi Saputra</li>
             <li>231011401790</li>
             <li>05tplp 012</li>
-        </p>
+        </ul>
     </footer>
 
 </body>
