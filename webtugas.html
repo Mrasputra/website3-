@@ -1,283 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Daily Schedule</title>
+    <title>Jadwal Harian Muhammad Rifky</title>
     <style>
-
-        :root {
-            --primary-color: #3f51b5; 
-            --secondary-color: #ff9800; 
-            --text-color: #333;
-            --light-bg: #f4f7f6;
-            --white: #ffffff;
-            --timeline-line: #ccc;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--secondary-color);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-        }
-
-        nav a {
-            color: var(--white);
-            font-weight: bold;
-            padding: 10px 15px;
-            border: 2px solid var(--white);
-            border-radius: 5px;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-color: var(--secondary-color);
-            color: var(--white);
-        }
-
-        footer {
-            background-color: var(--text-color);
-            color: var(--white);
+            background: #f5f5f5;
             text-align: center;
-            padding: 15px 0;
-            margin-top: 40px;
-            font-size: 0.9em;
         }
-        
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block; 
-        }
-        footer li {
-            margin: 5px 0;
-        }
-
-
-        .schedule-list {
-            position: relative;
-            padding-top: 20px;
-            padding-left: 20px; 
-        }
-
-        .schedule-list::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 20px;
-            width: 2px;
-            height: 100%;
-            background-color: var(--timeline-line);
-        }
-
-        .schedule-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 40px;
-            position: relative;
-            padding-left: 50px; 
-        }
-
-        .schedule-item::before {
-            content: '';
-            position: absolute;
-            left: 17px; 
-            top: 5px;
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary-color);
-            border: 3px solid var(--white);
-            border-radius: 50%;
-            z-index: 10;
-        }
-
-        .schedule-time {
-            flex: 0 0 150px; 
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-right: 20px;
-            font-size: 1.1em;
-            padding-top: 3px;
-        }
-
-        .schedule-content {
-            flex: 1;
-            background-color: var(--white);
+        header {
+            background: #333;
+            color: white;
             padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-
-        .schedule-content p {
-            margin-top: 0;
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .item {
+            background: white;
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .time {
+            font-weight: bold;
+            color: #666;
             margin-bottom: 10px;
         }
-
-        .schedule-content img {
-            display: block; 
+        img {
             width: 100%;
-
-            height: auto; 
-            max-height: 250px;
-            object-fit: cover; 
-            border-radius: 5px; 
-            margin-top: 10px;
-        }
-
-        .schedule-content audio,
-        .schedule-content video {
+            max-width: 300px;
+            height: auto;
+            margin: 10px auto;
             display: block;
-            width: 100%;
-            max-width: 100%;
-            margin: 10px 0;
-            border-radius: 5px;
         }
-
-
+        audio, video {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            display: block;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="container">
-            <h1>My Daily Schedule</h1>
-            <nav>
-                <a href="about.html" target="_blank">About Me</a>
-            </nav>
-        </div>
+        <h1>Jadwal Harian Saya</h1>
+        <a href="about.html" target="_blank" style="color: white;">About Me</a>
     </header>
-
-    <main class="container">
+    <div class="container">
         <h2>Today's Activities</h2>
-
-        <section class="schedule-list">
-
-            <div class="schedule-item">
-                <div class="schedule-time">05:00 AM</div>
-                <div class="schedule-content">
-                    <p><strong>Salat subuh</strong></p>
-                    <img src="Shalat-Subuh.jpg" alt="Fajr Prayer Image">
-                    <p>Pada jam 5 pagi, saya bangun tidur atau bisa lebih cepat. Ketika bangun, saya Salat subuh dan melakukan kegiatan yang lainnya.</p>
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">07:00 AM - 08:00 AM</div>
-                <div class="schedule-content">
-                    <p><strong>Mengantar adik saya ke sekolah</strong></p>
-                    <img src="sekolah.jpg" alt="School Drop-off Image">
-                    <p>Pada jam 7 itu saya mengantar adik saya pergi ke sekolah, dan biasanya sekitar jam 10 saya menjemput adik saya dari sekolah.</p>
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">09:00 AM</div>
-                <div class="schedule-content">
-                    <p><strong>Menyapu Rumah</strong></p>
-                    <img src="menyapu.jpg" alt="Sweeping Image">
-                    <p>Pada jam 9 saya menyapu rumah, mengepel dan biasanya menyuci pakaian yang saya pakai ketika kuliah.</p>
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">10:00 AM - 12:00 PM</div>
-                <div class="schedule-content">
-                    <p><strong>Menonton youtube, film, anime, mendengarkan musik dll.</strong></p>
-                    <img src="film.jpg" alt="Leisure Time Image">
-                    <p>Pada jam 10 sampai jam 12 saya melakukan kegiatan santai. Mungkin itu menonton film, anime, youtube, mendengarkan musik atau mengerjakan tugas kuliah (seperti halnya saya mengerjakan tugas web ini).</p>
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">12:00 PM</div>
-                <div class="schedule-content">
-                    <p><strong>Salat Dzuhur</strong></p>
-                    <img src="dzuhur.jpeg" alt="Dhuhr Prayer Image">
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">01:00 PM - 03:00 PM</div>
-                <div class="schedule-content">
-                    <p><strong>Tidur Siang</strong></p>
-                    <img src="siang.jpeg" alt="Nap Image">
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">04:00 PM</div>
-                <div class="schedule-content">
-                    <p><strong>Mengantar adik saya Mengaji</strong></p>
-                    <img src="mengaji.webp" alt="Qur'an Class Image">
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">05:00 PM - 09:00 PM</div>
-                <div class="schedule-content">
-                    <p><strong>Mengantar Makanan ke rumah-rumah</strong></p>
-                    <img src="mengantar.jpeg" alt="Work/Delivery Image">
-                    <p>Pada Jam 5 sampai jam 9 saya membantu ibu saya mengantar makanan ke rumah-rumah.</p>
-                </div>
-            </div>
-
-            <div class="schedule-item">
-                <div class="schedule-time">10:00 PM - 05:00 AM</div>
-                <div class="schedule-content">
-                    <p><strong>Tidur Malam</strong></p>
-                    <img src="malam.jpg" alt="Sleeping Image">
-                    <p>Pada jam 9 sampai 10 saya biasanya bersantai (nonton tiktok, mendengarkan musik, atau *scroll reels* instagram).</p>
-                    
-                    <audio src="ceremony.mp3" controls></audio>
-                    
-                    <video src="f1.mp4" controls></video>
-                    
-                    <p>Lalu pada jam 10 sampai jam 5 saya tidur Malam.</p>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
+        <div class="item">
+            <div class="time">05:00 AM</div>
+            <strong>Salat Subuh</strong>
+            <br><img src="Shalat-Subuh.jpg" alt="Fajr Prayer">
+            <p>Pada jam 5 pagi, saya bangun tidur atau bisa lebih cepat. Ketika bangun, saya Salat subuh dan melakukan kegiatan yang lainnya.</p>
+        </div>
+        <div class="item">
+            <div class="time">07:00 AM - 08:00 AM</div>
+            <strong>Mengantar adik saya ke sekolah</strong>
+            <br><img src="sekolah.jpg" alt="School">
+            <p>Pada jam 7 itu saya mengantar adik saya pergi ke sekolah, dan biasanya sekitar jam 10 saya menjemput adik saya dari sekolah.</p>
+        </div>
+        <div class="item">
+            <div class="time">09:00 AM</div>
+            <strong>Menyapu Rumah</strong>
+            <br><img src="menyapu.jpg" alt="Sweeping">
+            <p>Pada jam 9 saya menyapu rumah, mengepel dan biasanya menyuci pakaian yang saya pakai ketika kuliah.</p>
+        </div>
+        <div class="item">
+            <div class="time">10:00 AM - 12:00 PM</div>
+            <strong>Menonton youtube, film, anime, mendengarkan musik dll.</strong>
+            <br><img src="film.jpg" alt="Leisure">
+            <p>Pada jam 10 sampai jam 12 saya melakukan kegiatan santai. Mungkin itu menonton film, anime, youtube, mendengarkan musik atau mengerjakan tugas kuliah.</p>
+        </div>
+        <div class="item">
+            <div class="time">12:00 PM</div>
+            <strong>Salat Dzuhur</strong>
+            <br><img src="dzuhur.jpeg" alt="Dhuhr Prayer">
+        </div>
+        <div class="item">
+            <div class="time">01:00 PM - 03:00 PM</div>
+            <strong>Tidur Siang</strong>
+            <br><img src="siang.jpeg" alt="Nap">
+        </div>
+        <div class="item">
+            <div class="time">04:00 PM</div>
+            <strong>Mengantar adik saya Mengaji</strong>
+            <br><img src="mengaji.webp" alt="Quran Class">
+        </div>
+        <div class="item">
+            <div class="time">05:00 PM - 09:00 PM</div>
+            <strong>Mengantar Makanan ke rumah-rumah</strong>
+            <br><img src="mengantar.jpeg" alt="Delivery">
+            <p>Pada Jam 5 sampai jam 9 saya membantu ibu saya mengantar makanan ke rumah-rumah.</p>
+        </div>
+        <div class="item">
+            <div class="time">10:00 PM - 05:00 AM</div>
+            <strong>Tidur Malam</strong>
+            <br><img src="malam.jpg" alt="Sleep">
+            <p>Pada jam 9 sampai 10 saya biasanya bersantai (nonton tiktok, mendengarkan musik, atau scroll reels instagram).</p>
+            <audio src="ceremony.mp3" controls></audio>
+            <video src="f1.mp4" controls></video>
+            <p>Lalu pada jam 10 sampai jam 5 saya tidur Malam.</p>
+        </div>
+    </div>
     <footer>
         <ul>
             <li>Muhammad Rifky Ardi Saputra</li>
@@ -285,6 +129,5 @@
             <li>05tplp 012</li>
         </ul>
     </footer>
-
 </body>
 </html>
