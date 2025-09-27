@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* CSS for about.html (mostly shared base styles) */
+        :root {
+            --primary-color: #3f51b5; /* Indigo */
+            --secondary-color: #ff9800; /* Orange/Amber */
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        /* Base and Typography */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header Styling --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        nav a {
+            color: var(--white);
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 2px solid var(--white);
+            border-radius: 5px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* --- Footer Styling --- */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        /* --- About Me Specific (Centering) --- */
+        .about-page {
+            /* Full height minus header and footer for perfect center */
+            min-height: calc(100vh - 160px); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-card {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .profile-img-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: var(--light-bg);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid var(--primary-color);
+            /* Diubah: Menggunakan position: relative agar elemen di dalamnya bisa diatur layer-nya */
+            position: relative; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: var(--primary-color);
+            font-style: italic;
+            overflow: hidden; 
+        }
+
+        /* PERBAIKAN CSS agar gambar muncul */
+        .profile-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Penting: Pastikan display:block; agar gambar yang valid muncul */
+            display: block; 
+            /* Penting: Set z-index agar gambar berada di atas teks placeholder */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2; 
+        }
+
+        /* CSS untuk teks placeholder, pastikan berada di layer bawah gambar */
+        .profile-img-placeholder p {
+            position: relative;
+            z-index: 1; /* Di bawah gambar */
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 2em;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>About Me</h1>
+            <nav>
+                <a href="webtugas.html">Back to Schedule</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="about-page">
+        <div class="profile-card">
+            
+            <div class="profile-img-placeholder">
+                <img src="kkk.png" alt="Muhammad Rifky Ardi Saputra Profile Photo"> 
+                <p>Add Profile Photo Here</p>
+            </div>
+            
+            <h2>Muhammad Rifky Ardi Saputra</h2>
+            <p>Informatics Student at Pamulang University</p>
+
+            <div class="social-links">
+            <a href="https://www.linkedin.com/in/muhammad-rifky-ardi-saputra-094205387/" target="_blank">LinkedIn Profile</a>
+            <a href="https://www.instagram.com/muhmdrifky._/" target="_blank">Instagram Profile</a>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <li>Muhammad Rifky Ardi Saputra</li>
+            <li>231011401790</li>
+            <li>05tplp 012</li>
+        </p>
+    </footer>
+
+</body>
+</html>
